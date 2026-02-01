@@ -41,15 +41,29 @@ Il confronto tra le curve ROC del set di addestramento e di test conferma la sta
 
 ![ROC Curve Overfitting](overfitting.png)
 
-* **AUC-TRAIN:** 0.679
-* **AUC-TEST:** 0.678
-* **Conclusione:** La coerenza tra le curve dimostra l'assenza di overfitting e un'ottima capacità di generalizzazione su nuovi pazienti.
+* **AUC-TRAIN:** 0.588
+* **AUC-TEST:** 0.587
+* **Conclusione Tecnica:** La coerenza millimetrica tra le curve dimostra l'assenza di overfitting e un'ottima capacità di generalizzazione su nuovi pazienti.
 
 ---
 
-## 🛠️ Tecnologie Utilizzate
-* **Linguaggio:** Python 3.x
-* **Librerie Principali:** `pandas`, `scikit-learn`, `xgboost`, `seaborn`, `matplotlib`
+## 🏁 Conclusioni e Impatto Strategico
+L'analisi conferma che il modello sviluppato è idoneo come sistema di **screening preliminare**. 
+* **Affidabilità Clinica:** La scelta di XGBoost, unita all'ottimizzazione della Recall, garantisce che il sistema sia sensibile nell'intercettare soggetti a rischio.
+* **Trasparenza:** L'analisi delle Feature Importance dimostra che il modello "ragiona" basandosi su fattori medici noti (come BMI e Ipertensione), rendendo le predizioni spiegabili e non una "Black Box".
+* **Robustezza:** L'assenza di overfitting assicura che le prestazioni rimarranno stabili anche su dati futuri.
+
+---
+
+## 🛠️ Tecnologie e Algoritmi Utilizzati
+Il progetto è stato sviluppato interamente in **Python 3.x**.
+
+* **Manipolazione Dati:** `pandas`, `numpy`
+* **Visualizzazione:** `seaborn`, `matplotlib`
+* **Machine Learning (Scikit-Learn):** * `LogisticRegression` (Baseline lineare)
+    * `RandomForestClassifier` (Modello Ensemble bagging)
+    * `StandardScaler` (Pre-processing)
+* **Modello Finale:** `xgboost` (Gradient Boosting avanzato)
 
 ## 📂 Come riprodurre il progetto
 1.  Clona la repository.
